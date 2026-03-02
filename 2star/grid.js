@@ -19,7 +19,7 @@ class Grid {
             this.#cells[row] = []; // add an empty row
             for (let col = 0; col < numCols; col++) {
                 // Set each cell on the row to false to start with
-                this.#cells[row][col] = false;
+                this.#cells[row][col] = null;
             }
         }
     }
@@ -41,7 +41,7 @@ class Grid {
             for (let y = obstacle.getY(); y < bottomEdge; y += this.#cellSize) {
                 const row = this.#getIndexOfCoord(y);
                 // Mark the cell as occupied
-                this.#cells[row][col] = true;
+                this.#cells[row][col] = obstacle;
             }
         }
     }
@@ -60,7 +60,12 @@ class Grid {
         }
         const row = this.#getIndexOfCoord(y);
         const col = this.#getIndexOfCoord(x);
-        return this.#cells[row][col]; // return the content of the grid cell
+        if (this.#cells[row][col] = null){
+            return false;
+        }
+        else if (this.#cells[row][col] = obstacle){
+            return true;
+        }
     }
 
     /**
