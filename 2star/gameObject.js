@@ -77,3 +77,46 @@ class GameObject {
         throw "Method not implemented!";
     }
 }
+
+    /**
+     * Gets the y coordinate
+     * @returns {number}
+     */
+    getY() {
+        return this.#y;
+    }
+
+    /**
+     * Sets the y coordinate
+     * @param {number} newY 
+     */
+    setY(newY) {
+        this.#y = newY;
+    }
+
+
+    /**
+     * Gets the width
+     * @returns {number}
+     */
+    getWidth() {
+        return this.#w;
+    }
+
+    /**
+     * Gets the height
+     * @returns {number}
+     */
+    getHeight() {
+        return this.#h;
+    }
+
+    /**
+     * Draws the object - should be implemented in child class
+     * Throwing an exception will remind developers of child classes to 
+     * implement the draw() method
+     */
+    draw() {
+        throw "Method not implemented!";
+    }
+}
