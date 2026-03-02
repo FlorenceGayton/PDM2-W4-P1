@@ -48,7 +48,7 @@ class Player extends GameObject {
 
 
     /**
-     * Move the player right at the current speed
+     * Move the player
      */
     moveRight() {
         this.setX(this.getX() + this.#speed);
