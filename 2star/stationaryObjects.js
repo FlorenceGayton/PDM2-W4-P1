@@ -55,3 +55,17 @@ class Wall extends StationaryObject {
         super(x, y, w, h, 1, color(100));
     }
 }
+
+class Treasure extends StationaryObject {
+    /**
+     * Creates a new treasure
+     * @param {number} x The x coordinate
+     * @param {number} y The y coordinate
+     * @param {number} w The width
+     * @param {number} h The height
+     * @param {color} col the colour
+     */
+    constructor(x, y, w, h) {
+        super(x, y, w, h, 0, color(255, 215, 0));
+    }
+}
